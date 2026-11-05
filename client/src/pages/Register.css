@@ -1,0 +1,36 @@
+
+.register-card {
+  max-width: 480px;
+}
+
+.register-card .auth-heading {
+  margin: 28px 0 22px;
+}
+
+.register-card .auth-heading h1 {
+  font-size: 30px;
+}
+
+.register-card .auth-form {
+  gap: 9px;
+}
+
+.register-card .auth-form input {
+  margin-bottom: 7px;
+}
+.auth-message {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-message.success {
+  color: #18794e;
+  background: #e8f7ef;
+}
+
+.auth-message.error {
+  color: #c62828;
+  background: #fdecec;
+}
