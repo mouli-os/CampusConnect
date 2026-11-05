@@ -1,0 +1,177 @@
+
+.gallery-page {
+  min-height: 100vh;
+  padding: 40px 7%;
+  background: #f7f8fc;
+  color: #252b42;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.gallery-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #252b42;
+}
+
+.gallery-header p {
+  color: #777f95;
+  font-size: 16px;
+}
+
+.gallery-upload-card {
+  max-width: 650px;
+  margin: 0 auto 55px;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-upload-card h2 {
+  margin-bottom: 25px;
+  font-size: 23px;
+}
+
+.gallery-upload-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gallery-upload-card label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gallery-upload-card input,
+.gallery-upload-card textarea,
+.gallery-upload-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfe3ed;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.gallery-upload-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.gallery-upload-card input:focus,
+.gallery-upload-card textarea:focus,
+.gallery-upload-card select:focus {
+  outline: none;
+  border-color: #6254e7;
+}
+
+.gallery-upload-card button {
+  margin-top: 10px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #6254e7;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gallery-upload-card button:hover {
+  background: #4e40cf;
+}
+
+.gallery-upload-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gallery-message {
+  margin-top: 15px;
+  color: #6254e7;
+  font-weight: 600;
+}
+
+.gallery-section h2 {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.empty-gallery {
+  padding: 40px 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  color: #777f95;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-photo-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.gallery-photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-photo-info {
+  padding: 18px;
+}
+
+.gallery-photo-info h3 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.gallery-photo-info p {
+  color: #777f95;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.gallery-photo-info span {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #eeecff;
+  color: #6254e7;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .gallery-page {
+    padding: 25px 5%;
+  }
+
+  .gallery-header h1 {
+    font-size: 29px;
+  }
+
+  .gallery-upload-card {
+    padding: 20px;
+  }
+}

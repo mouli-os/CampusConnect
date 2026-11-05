@@ -7,6 +7,8 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const eventRoutes = require("./routes/eventRoutes");
+const photoRoutes = require("./routes/photoRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
 const events = require("./data/events");
 
 dotenv.config();
@@ -25,7 +27,8 @@ app.use("/api/auth", authRoutes);
 
 // Event registration routes
 app.use("/api/events", eventRoutes);
-
+app.use("/api/photos", photoRoutes);
+app.use("/api/reviews", reviewRoutes);
 // Home route
 app.get("/", (req, res) => {
   res.send("Welcome to Campus Connect Backend!");

@@ -1,5 +1,7 @@
 
 
+
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
@@ -52,9 +54,15 @@ function Dashboard() {
           Campus<span>Connect</span>
         </Link>
 
-        <button onClick={handleLogout} className="logout-button">
-          Logout
-        </button>
+        <div>
+          <Link to="/gallery" className="event-button">
+            Campus Gallery
+          </Link>
+
+          <button onClick={handleLogout} className="logout-button">
+            Logout
+          </button>
+        </div>
       </nav>
 
       <main className="dashboard-content">
@@ -75,6 +83,16 @@ function Dashboard() {
           <p><strong>Email:</strong> {user?.email}</p>
           <p><strong>Student ID:</strong> {user?.studentId}</p>
         </div>
+
+        {/* Campus Gallery */}
+        <section className="gallery-dashboard-section">
+          <h2>Campus Gallery 📸</h2>
+          <p>Share your favourite campus moments and explore photographs shared by students.</p>
+
+          <Link to="/gallery" className="event-button">
+            Explore Campus Gallery →
+          </Link>
+        </section>
 
         {/* Upcoming Events */}
         <section className="events-section">
@@ -111,10 +129,10 @@ function Dashboard() {
                   </div>
 
                   <Link
-                  to={`/event/${event.id}`}
-                  className="event-button"
+                    to={`/event/${event.id}`}
+                    className="event-button"
                   >
-                  View Event →
+                    View Event →
                   </Link>
                 </div>
               </div>
@@ -128,4 +146,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
